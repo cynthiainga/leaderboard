@@ -13,7 +13,8 @@ const renderScore = (scores) => {
 };
 
 const form = document.querySelector('#score-form');
-const inputs = form.querySelectorAll('input');
+const inputName = form.querySelector('.input-name');
+const inputScore = form.querySelector('.input-score');
 const refreshBtn = document.querySelector('.refresh-btn');
 
 refreshBtn.addEventListener('click', async () => {
@@ -25,10 +26,12 @@ refreshBtn.addEventListener('click', async () => {
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const newPlayer = {
-    user: inputs[0].value,
-    score: inputs[1].value,
+    user: inputName.value,
+    score: inputScore.value,
   };
   getResponse(newPlayer);
+  form.querySelector('.input-name').value = '';
+  form.querySelector('.input-score').value = '';
 });
 
 window.onload = async () => {
