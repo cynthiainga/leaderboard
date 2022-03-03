@@ -18,43 +18,26 @@
                 Refresh
               </button>
             </div>
-            <ul class="list">
-              <li class="score-item">
-                <span>Name: </span>
-                <span>100</span>
-              </li>
-              <li class="score-item">
-                <span>Name: </span>
-                <span>20</span>
-              </li>
-              <li class="score-item">
-                <span>Name: </span>
-                <span>50</span>
-              </li>
-              <li class="score-item">
-                <span>Name: </span>
-                <span>78</span>
-              </li>
-              <li class="score-item">
-                <span>Name: </span>
-                <span>125</span>
-              </li>
-              <li class="score-item">
-                <span>Name: </span>
-                <span>77</span>
-              </li>
-              <li class="score-item">
-                <span>Name: </span>
-                <span>42</span>
-              </li>
-            </ul>
+            <ul class="list"></ul>
           </div>
-          <form class="form">
-            <h2>Add your score</h2>
-            <input type="text" class="input-name" placeholder="Your Name" />
-            <input type="text" class="input-score" placeholder="Your Score" />
-            <button class="submit-btn clickable" type="button">Submit</button>
-          </form>
+          <div class="right-wrap flex-center-culomn">
+            <form class="form flex-center-culomn" id="score-form">
+              <h2>Add your score</h2>
+              <input
+                type="text"
+                class="input-name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="number"
+                class="input-score"
+                placeholder="Your Score"
+                required
+              />
+              <button class="submit-btn clickable" type="submit">Submit</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

@@ -6,10 +6,19 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: #d2dde9;
+  background-color: #06224b;
 }
 
 .clickable {
   cursor: pointer;
+}
+
+.flex-center-culomn {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .container {
@@ -23,17 +32,18 @@ body {
 }
 
 .leaderboard-title {
-  font-size: 38px;
+  font-size: 40px;
   padding: 10px 3px;
+  letter-spacing: 1px;
 }
 
 .leaderboard-container {
   display: flex;
-  padding: 15px 20px;
+  padding: 15px 20px 10px 30px;
 }
 
 .recent-scores {
-  width: 70%;
+  width: 50%;
 }
 
 .title {
@@ -41,60 +51,81 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 10px 0 15px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .refresh-btn {
-  padding: 5px 15px;
+  padding: 7px 15px;
   box-shadow: 3px 3px 0 0 #0d1116;
   border: 1px solid #0d1116;
   border-radius: 4px;
+  font-size: 17px;
+  background-color: #123c7a;
+  color: #d2dde9;
 }
 
 .list {
-  border: solid #0d1116;
   border-radius: 5px;
+  box-shadow: 3px 3px 0 0 #0d1116;
+  border: 2px solid #343638;
 }
 
 .list li {
-  padding: 5px;
+  padding: 10px;
   display: flex;
   justify-content: start;
   align-items: center;
+}
+
+.sore-item {
+  padding: 10px;
 }
 
 .list li:nth-child(even) {
-  background: #ddd;
+  background-color: #3a3939;
 }
 
-.form {
+.right-wrap {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px;
-  justify-content: start;
-  align-items: center;
 }
 
 form h2 {
   padding: 10px 0 35px;
-  font-size: 22px;
+  font-size: 26px;
 }
 
-form .input-name,
+.form {
+  width: 260px;
+}
+
+.input-name,
 .input-score {
-  padding: 7px 10px;
-  width: 150px;
+  padding: 10px 8px;
+  width: 100%;
   margin-bottom: 20px;
   font-size: 15px;
-  border: 2.5px solid #0d1116;
+  border: 2.5px solid #f0f6fc1a;
+  color: #c9d1c9;
+  background-color: #2c3138;
   border-radius: 4px;
 }
 
-.submit-btn {
-  padding: 5px 15px;
-  box-shadow: 3px 3px 0 0 #0d1116;
-  border: 1px solid #0d1116;
+input::placeholder {
+  color: #c9d1c9;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: 1px solid #c9d1c9;
+}
+
+form .submit-btn {
+  padding: 7px 20px;
+  background-color: #0c336d;
+  color: #d2dde9;
+  border: 1px solid #f0f6fc1a;
   border-radius: 4px;
-  margin: 10px;
+  box-shadow: 3px 3px 0 0 #0d1116;
+  align-items: flex-end;
+  font-size: 16px;
 }

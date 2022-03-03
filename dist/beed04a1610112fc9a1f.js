@@ -1,0 +1,1 @@
+fetch("https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Candy/",{method:"POST",body:JSON.stringify({name:"Candy"}),headers:{"Content-type":"application/json; charset=UTF-8"}}).then((n=>n.json())).then((n=>console.log(n)));
