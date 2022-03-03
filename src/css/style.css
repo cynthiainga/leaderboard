@@ -14,7 +14,7 @@ body {
   cursor: pointer;
 }
 
-.flex-center-column {
+.flex-center-culomn {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -32,7 +32,7 @@ body {
 }
 
 .leaderboard-title {
-  font-size: 38px;
+  font-size: 40px;
   padding: 10px 3px;
   letter-spacing: 1px;
 }
@@ -51,7 +51,7 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 10px 0 15px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .refresh-btn {
@@ -59,21 +59,26 @@ body {
   box-shadow: 3px 3px 0 0 #0d1116;
   border: 1px solid #0d1116;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 17px;
   background-color: #123c7a;
   color: #d2dde9;
 }
 
 .list {
-  border: 2px solid #343941;
   border-radius: 5px;
+  box-shadow: 3px 3px 0 0 #0d1116;
+  border: 2px solid #343638;
 }
 
 .list li {
-  padding: 5px;
+  padding: 10px;
   display: flex;
   justify-content: start;
   align-items: center;
+}
+
+.sore-item {
+  padding: 10px;
 }
 
 .list li:nth-child(even) {
@@ -86,11 +91,11 @@ body {
 
 form h2 {
   padding: 10px 0 35px;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .form {
-  width: 270px;
+  width: 260px;
 }
 
 .input-name,
@@ -114,12 +119,13 @@ input:focus {
   outline: 1px solid #c9d1c9;
 }
 
-.submit-btn {
+form .submit-btn {
   padding: 7px 20px;
   background-color: #0c336d;
   color: #d2dde9;
   border: 1px solid #f0f6fc1a;
   border-radius: 4px;
+  box-shadow: 3px 3px 0 0 #0d1116;
   align-items: flex-end;
   font-size: 16px;
 }
