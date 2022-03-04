@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
     <title>Leaderboard</title>
   </head>
   <body>
@@ -16,6 +21,7 @@
               <h2>Recent Scores</h2>
               <button class="refresh-btn clickable" type="button">
                 Refresh
+                <i class="fa fa-refresh"></i>
               </button>
             </div>
             <ul class="list"></ul>
@@ -35,7 +41,10 @@
                 placeholder="Your Score"
                 required
               />
-              <button class="submit-btn clickable" type="submit">Submit</button>
+              <button class="submit-btn clickable" type="submit">
+                Submit
+                <i class="fa fa-check-square-o"></i>
+              </button>
             </form>
           </div>
         </div>

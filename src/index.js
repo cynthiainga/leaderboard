@@ -1,27 +1,13 @@
 import './css/style.css';
-import getResponse, { getScore } from './modules/api.js';
-
-const renderScore = (scores) => {
-  const scoresList = document.querySelector('.list');
-  scoresList.innerHTML = '';
-  scores.forEach(({ user, score }) => {
-    const scoreItem = document.createElement('li');
-    scoreItem.classList.add('score-item');
-    scoreItem.innerHTML = `<span>${user}</span>: <span>${score}</span>`;
-    scoresList.appendChild(scoreItem);
-  });
-};
+import getResponse from './modules/api.js';
+import { refreshData } from './modules/refreshData.js';
 
 const form = document.querySelector('#score-form');
 const inputName = form.querySelector('.input-name');
 const inputScore = form.querySelector('.input-score');
 const refreshBtn = document.querySelector('.refresh-btn');
 
-refreshBtn.addEventListener('click', async () => {
-  const result = await getScore();
-  const { result: data } = await result.json();
-  renderScore(data);
-});
+refreshBtn.addEventListener('click', refreshData);
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -29,13 +15,13 @@ form.addEventListener('submit', async (e) => {
     user: inputName.value,
     score: inputScore.value,
   };
-  getResponse(newPlayer);
-  form.querySelector('.input-name').value = '';
-  form.querySelector('.input-score').value = '';
+  await getResponse(newPlayer);
+  form.reset();
+  refreshData();
 });
 
 window.onload = async () => {
-  const result = await getScore();
-  const { result: data } = await result.json();
-  renderScore(data);
+  refreshData();
+  const refreshIcon = document.querySelector('.fa-refresh');
+  refreshIcon.classList.add('fa-spin');
 };
