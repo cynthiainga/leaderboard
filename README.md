@@ -4,14 +4,18 @@
 
 ## Description
 
-![Page_screenshot](./src/images/screenshot.png)
-
 > The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
+
+- This is the page view:
+
+> |     | Mobile version                          | Desktop version                          |     |
+> | --- | --------------------------------------- | ---------------------------------------- | --- |
+> |     | ![Screenshot1](./src/images/Mobile.png) | ![Screenshot2](./src/images/Desktop.png) |
 
 ## Built With
 
 - HTML
-- SCSS
+- CSS
 - JavaScript
 
 ## Get Started
