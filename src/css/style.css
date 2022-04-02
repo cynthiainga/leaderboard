@@ -76,7 +76,7 @@ body {
   color: #d2dde9;
 }
 
-.refresh-btn:focus-visible .fa-refresh {
+.refresh-btn .fa-refresh {
   animation: rotate 1s ease-in-out;
 }
 
